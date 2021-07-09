@@ -55,32 +55,32 @@ h3 {
     padding: 20px;
 }
 
-.cards {
-    position: relative; 
+/* Cards container */
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
     padding: 50px;
 }
 
-.card_1 {
+.card {
     position: relative;
     display: inline-block;
-    margin: 20px;
+    padding: 10px;
 }
 
-
-.batman {
+.heroe-picture img{
+    border-radius: 50%;
     position: absolute;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
     bottom: calc(55%);
     left: 85px
 }
 
-.batman img {
-    border-radius: 50%;
-}
-
 .heart {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
 }
 
 .link {
@@ -98,6 +98,8 @@ h3 {
     padding: 15px 0 0 35px;
 }
 
+/* Footer section */
+
 footer {
     background-color: #00669F;
     color: #F3F3F3;
@@ -106,4 +108,21 @@ footer {
 
 footer p {
     padding: 15px;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 480px){
+    .cards-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .cards-container {
+        flex-wrap: wrap;
+    }
+
 }
